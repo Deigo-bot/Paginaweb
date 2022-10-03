@@ -1,0 +1,48 @@
+<!-- <div class="container">
+    <div class="row">
+        <div *ngFor="let i of info" class="col-4">
+            <mat-card style="margin-top: 15px;" class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar [style]="i.avatar"></div>
+                  <mat-card-title style="font-size: 20px;">{{i.nombre}}</mat-card-title>
+                  <mat-card-subtitle style="font-size: 18px;">{{i.marca}}</mat-card-subtitle>
+                </mat-card-header>
+                <a href="{{i.url}}"><img class="img" [src]="i.imagen" alt="Photo of auto" height="250%" width="100%"></a>
+                <mat-card-content>
+                 
+                  <mat-card-subtitle >
+                    <div class="container">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon" >{{i.caracteristicas}}</mat-icon>{{i.modelo}}
+                    </div>
+                  </mat-card-subtitle>
+                  <span></span><h1 style="text-align: right; font-family: Lato-Bold;">{{i.precio}}</h1>
+                </mat-card-content>
+                
+              </mat-card>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+  <!-- el *ngFor es para recorrer una coleccion de cosas -->
+  <mat-card *ngFor="let col of coleccionDeCars" style="margin-top: 15px; margin-bottom: 15px;" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar [style]="col.Avatar"></div>
+      <mat-card-title style="font-size: 20px;">{{col.Nombre}}</mat-card-title>
+      <mat-card-subtitle style="font-size: 18px;">{{col.Marca}}</mat-card-subtitle>
+    </mat-card-header>
+    <a href="{{col.Url}}"><img class="img" [src]="col.Imagen" alt="Photo of auto" height="250%" width="100%"></a>
+    <mat-card-content>
+  
+      <mat-card-subtitle>
+        <div class="container-1">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">date_range</mat-icon>MODELO{{col.Modelo}}
+        </div>
+      </mat-card-subtitle>
+      <span></span>
+      <h1 style="text-align: right; font-family: Lato-Bold;">U$S{{col.Precio}}</h1>
+  
+    </mat-card-content>
+   
+  </mat-card>
+</div>

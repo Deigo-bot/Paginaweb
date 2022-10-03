@@ -1,0 +1,15 @@
+.vehiculos{
+    font-family: "Lato-Black";
+    font-size: 26px;
+    color: #222222;
+}
+.Vehiculo-datoTecnico {
+    font-size: 15px;
+    color: #5c5c5c;
+    font-family: "Lato-Bold";
+    display: flex;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

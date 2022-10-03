@@ -1,0 +1,100 @@
+<div class="texto">
+    <h1>Ingresa tus productos</h1>
+</div>
+
+<!-- Formulario para AGREGAR Producto -->
+<p-dialog header="Agregar Producto" [(visible)]="modalVisible">
+    <form [formGroup]="Car">
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Nombre">
+            <label for="float-input">Nombre</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Modelo">
+            <label for="float-input">Modelo</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="number" pInputText formControlName="Precio">
+            <label for="float-input">Precio</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Imagen">
+            <label for="float-input">Imagen</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Marca">
+            <label for="float-input">Marca</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Avatar">
+            <label for="float-input">Logo</label>
+        </span>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="Url">
+            <label for="float-input">Url a llevar</label>
+        </span>
+        <div class="" style="text-align: center; margin-top: 5px;">
+            <button pButton type="submit" label="{{textoBoton}}" (click)="cargarDatos()"></button>
+        </div>
+    </form>
+</p-dialog>
+
+<!-- Cartel de Advertencia antes de ELIMINAR -->
+<p-dialog header="¡¡ADVERTENCIA!!" [(visible)]="eliminarVisible">
+    <p>
+        ¿Deseas eliminar este producto?
+    </p>
+    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded" (click)="borrarCar()"></button>
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded"
+        (click)="eliminarVisible=false">
+    </button>
+
+</p-dialog>
+
+<!-- Card para MOSTRAR Productos -->
+<div class="coleccion">
+    <p-table responsiveLayout="scroll" [value]="coleccionDeCars">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nombre</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Marca</th>
+                <th>Logo</th>
+                <th>Url a llevar</th>
+                <th>Funciones</th>
+    
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Car >
+            
+            <tr style="font-size: 15px;">
+                <td><p>{{Car.Nombre}}</p></td>
+                <td><p>{{Car.Modelo}}</p></td>
+                <td><p>U$S {{Car.Precio}}</p></td>
+                <td type="image"><img [src]="Car.Imagen" alt="100px" width="" height="100px"></td>
+                <td><p>{{Car.Marca}}</p></td>
+                <td type="avatar"><img [src]="Car.Avatar" alt="" width="" height="50px"></td>
+                <td><p>{{Car.Url}}</p></td>
+                
+                
+    
+                <td> 
+                    <button pButton pRipple type="button" icon="pi pi-pencil" style="margin:10px ;" class="p-button-success"
+                        (click)="mostrarEditar(Car)">
+                    </button>
+                    <button pButton pRipple type="button" icon="pi pi-trash" style="margin:10px ;" class="p-button-danger"
+                        (click)="mostrarEliminar(Car)">
+                    </button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+</div>
+
+<!--este es el boton que agrega la informacion a los productos-->
+<div class="boton col-12">
+    <button pButton class="p-button-success" label="Agregar producto" (click)="mostrarDialogo()"></button>
+</div>

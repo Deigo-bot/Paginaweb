@@ -1,0 +1,26 @@
+*{
+    font-family: "Lato-Bold";
+}
+.fondo{
+    background-color: #dfdec8;
+}
+.carousel slide{
+    font-family: "Lato-Bold";
+}
+.site-shopping-info {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 3.75rem;
+    width: 100vw;
+}
+.site-shopping-info {
+    background-color: #fff;
+    overflow: hidden;
+}
+.imagen{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}

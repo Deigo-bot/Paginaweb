@@ -1,0 +1,20 @@
+.p-menubar{
+  background-color:#1A3C40;  
+  /* color negro #2C3639*/
+}
+.p-menubar .p-menubar-root-list> .p-menuitem> .p-menuitem-link .p-menuitem-text{
+  color: rgb(219, 219, 219);
+  font-size: 20px;
+}
+.p-menubar .p-menubar-root-list> .p-menuitem> .p-menuitem-link .p-menuitem-icon{
+  color:  rgb(219, 219, 219);
+  margin-right: 0.5rem;
+}
+.p-button-info{
+  font-size: 18px;
+  margin: 10px;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover{
+  background-color: #1A3C40;
+}
